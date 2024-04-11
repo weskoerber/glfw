@@ -104,3 +104,5 @@ tests/windows
 
 # Zig cache & bin
 zig-*
+# Wayland generated headers
+deps/wayland/gen
