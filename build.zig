@@ -105,13 +105,11 @@ fn generateWaylandProtocol(b: *std.Build, proto: []const u8) !void {
     );
 
     var path_to_proto = b.pathJoin(&[_][]const u8{
-        b.pathFromRoot("."),
-        "/deps/wayland",
+        "deps/wayland",
         proto,
     });
     var dest_path = b.pathJoin(&[_][]const u8{
-        b.pathFromRoot("."),
-        "/deps/wayland/gen",
+        "deps/wayland/gen",
         &wl_client_header,
     });
 
@@ -128,13 +126,11 @@ fn generateWaylandProtocol(b: *std.Build, proto: []const u8) !void {
     std.heap.page_allocator.free(result.stderr);
 
     path_to_proto = b.pathJoin(&[_][]const u8{
-        b.pathFromRoot("."),
-        "/deps/wayland",
+        "deps/wayland",
         proto,
     });
     dest_path = b.pathJoin(&[_][]const u8{
-        b.pathFromRoot("."),
-        "/deps/wayland/gen",
+        "deps/wayland/gen",
         &wl_client_code,
     });
 
